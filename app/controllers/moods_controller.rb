@@ -13,6 +13,11 @@ class MoodsController < ApplicationController
     end
   end
 
+  def show
+    @mood = Mood.find_by(id: params[:id])
+    render :show
+  end
+
   # def update_mood
   #   user = User.find(params[:id])
   #   if user.update(mood: params[:mood])

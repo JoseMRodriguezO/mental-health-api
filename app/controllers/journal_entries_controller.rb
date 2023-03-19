@@ -13,6 +13,11 @@ class JournalEntriesController < ApplicationController
     end
   end
 
+  def show
+    @journal_entry = JournalEntry.find_by(id: params[:id])
+    render :show
+  end
+
   # def update_journal_entry
   #   user = User.find(params[:id])
   #   if user.update(journal_entry: params[:journal_entry])
