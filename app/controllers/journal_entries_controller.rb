@@ -1,4 +1,9 @@
 class JournalEntriesController < ApplicationController
+  def index
+    @journal_entries = JournalEntry.all
+    render :index
+  end
+
   def create
     journal_entries = JournalEntry.new(
       user_id: params[:user_id],

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/users" => "users#index"
+  get "/journal_entries" => "journal_entries#index"
   get "/moods/:id" => "moods#show"
   get "/journal_entries/:id" => "journal_entries#show"
 
