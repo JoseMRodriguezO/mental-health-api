@@ -1,3 +1,4 @@
+json.id journal_entry.id
 json.user_id journal_entry.user_id
 json.title journal_entry.title
 json.content journal_entry.content
