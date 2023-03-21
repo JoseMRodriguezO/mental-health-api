@@ -5,16 +5,16 @@ class JournalEntriesController < ApplicationController
   end
 
   def create
-    journal_entries = JournalEntry.new(
-      user_id: params[:user_id],
+    @journal_entry = JournalEntry.new(
+      user_id: current_user.id,
       title: params[:title],
       content: params[:content],
     )
     # journalEntry.user_id = current_user.id
-    if journal_entries.save
-      render json: { message: "Journal entry created successfully" }, status: :created
+    if @journal_entry.save
+      render :show
     else
-      render json: { errors: journal_entries.errors.full_messages }, status: :bad_request
+      render json: { errors: @journal_entry.errors.full_messages }, status: :bad_request
     end
   end
 
