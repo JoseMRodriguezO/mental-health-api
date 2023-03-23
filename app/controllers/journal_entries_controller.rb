@@ -10,7 +10,7 @@ class JournalEntriesController < ApplicationController
       title: params[:title],
       content: params[:content],
     )
-    # journalEntry.user_id = current_user.id
+    
     if @journal_entry.save
       render :show
     else
@@ -31,13 +31,4 @@ class JournalEntriesController < ApplicationController
     )
     render :show
   end
-
-  # def update_journal_entry
-  #   user = User.find(params[:id])
-  #   if user.update(journal_entry: params[:journal_entry])
-  #     render json: { message: "Journal entry updated successfully" }, status: :ok
-  #   else
-  #     render json: { errors: user.errors.full_messages }, status: :bad_request
-  #   end
-  #end
 end
