@@ -1,15 +1,15 @@
 class MoodsController < ApplicationController
   def create
-    mood = Mood.new(
-      user_id: params[:user_id],
+    @mood = Mood.new(
+      user_id: current_user.id,
       mood_type: params[:mood_type],
       mood_intensity: params[:mood_intensity],
     )
     # mood.user_id = current_user.id
-    if mood.save
-      render json: { message: "Mood created successfully" }, status: :created
+    if @mood.save
+      render :show
     else
-      render json: { errors: mood.errors.full_messages }, status: :bad_request
+      render json: { errors: @mood.errors.full_messages }, status: :bad_request
     end
   end
 
