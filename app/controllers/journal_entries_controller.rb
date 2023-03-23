@@ -10,7 +10,7 @@ class JournalEntriesController < ApplicationController
       title: params[:title],
       content: params[:content],
     )
-    
+
     if @journal_entry.save
       render :show
     else
@@ -29,6 +29,12 @@ class JournalEntriesController < ApplicationController
       title: params[:title] || @journal_entry.title,
       content: params[:content] || @journal_entry.content,
     )
+    render :show
+  end
+
+  def destroy
+    @journal_entry = JournalEntry.find_by(id: params[:id])
+    @journal_entry
     render :show
   end
 end

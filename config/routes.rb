@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+
+  delete "/journal_entries/:id" => "journal_entries#destroy"
 end
