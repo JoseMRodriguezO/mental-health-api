@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get "/journal_entries" => "journal_entries#index"
-  get "/moods/:id" => "moods#show"
   get "/journal_entries/:id" => "journal_entries#show"
 
+  get "/moods" => "moods#index"
   post "/moods" => "moods#create"
   post "/journal_entries" => "journal_entries#create"
 

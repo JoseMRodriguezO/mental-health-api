@@ -1,4 +1,9 @@
 class MoodsController < ApplicationController
+  def index
+    @moods = Mood.all
+    render :index
+  end
+
   def create
     @mood = Mood.new(
       user_id: current_user.id,
