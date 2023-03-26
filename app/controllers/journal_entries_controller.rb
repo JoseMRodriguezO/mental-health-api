@@ -34,7 +34,7 @@ class JournalEntriesController < ApplicationController
 
   def destroy
     @journal_entry = JournalEntry.find_by(id: params[:id])
-    @journal_entry
+    @journal_entry.destroy
     render :show
   end
 end
