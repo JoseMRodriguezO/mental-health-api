@@ -1,0 +1,2 @@
+class PositiveQuotesController < ApplicationController
+end
