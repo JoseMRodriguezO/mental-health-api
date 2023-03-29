@@ -20,7 +20,10 @@ To install and run Mental Health API locally, follow these steps:
 - jwt: for JSON Web Token (JWT) authentication
 - httparty: for making HTTP requests
 
-  **Create the database**:
+  **Install gems**
+  **Create database**
+  **Run migrations**
+  **Start server**
 
   ```ruby
   bundle install
@@ -30,7 +33,7 @@ To install and run Mental Health API locally, follow these steps:
   rails server
   ```
 
-Clone the repository: git clone https://github.com/YOUR-USERNAME/mental-health-api.git
+Clone the repository: git clone https://github.com/JoseMRodriguezO/mental-health-api.git
 
 ## Usage <a name="Usage"></a>
 
